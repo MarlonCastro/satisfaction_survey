@@ -1,0 +1,13 @@
+.content-footer {
+    position: relative;
+    height: 70px;
+    width: 100%;
+    background: white;
+    box-shadow: 5px 2px 8px rgba(136, 136, 136, 0.3);
+    .footer-ul {
+      list-style: none;
+      li {
+        text-align: center
+      }
+    }
+}

@@ -1,40 +1,84 @@
 .overview {
-    .card-overview {
-        padding: 20px;
-        background: white;
-        height: 60px;
-        border-top: 2px solid #8ACC54;
-        p {
-            font-size: 13px;
-            text-align: center;
-            font-weight: 100;
-        }
-        &.rest {
-           background: rgb(228, 225, 228);
-           border-top: none
-        }
+  .header-tab {
+    display: flex;
+    .first-tab {
+      width: 17%;
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+     }
     }
-    .title {
-        margin-top: 35px; 
-        font-size: 20px;
-        color:#333333 !important;
+  }
+  .grid-overview {
+    width: 14.28%;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+   }
+  }
+  .card-overview {
+      padding: 20px;
+      background: white;
+      height: 60px;
+      border-top: 2px solid #8ACC54;
+      @media only screen and (max-width: 768px) {
+        border-top:none;
+     }
+      p {
+        font-size: 13px;
+        text-align: center;
+        font-weight: 100;
+      }
+      &.rest {
+        background: rgb(247, 244, 247);
+        border-top: none;
+        width: 100%;
+      }
+  }
+  .title {
+    margin-top: 35px; 
+    margin-bottom: 40px;
+    font-size: 20px;
+    color:#333333 !important;
+  }
+  .bd-1 {
+    border: 1px solid #E6E6E6;
+  }
+  .card-balance {
+    padding: 30px 25px 5px 25px;
+    @media only screen and (max-width: 768px) {
+      padding: 20px 25px 0px 20px;
     }
-    .bd-1 {
-        border: 1px solid #E6E6E6;
+    text-align: left;
+    p {
+      color:#333333 !important;
     }
-    .card-balance {
-        padding: 30px 25px 5px 25px;
-        text-align: left;
-        p {
-            color:#333333 !important;
-        }
-        .title-small {
-            font-size: 15px;
-            
-        }
-        .description-number {
-            font-size: 30px;
-
-        }
+    .title-small {
+      font-size: 15px;
+      @media only screen and (max-width: 768px) {
+        text-align: center
+      }
+      img {
+        width: 17px;
+        margin-top: -4px;    
+      }
     }
+    .description-number {
+      font-size: 30px;
+      @media only screen and (max-width: 768px) {
+        text-align: center
+      }
+    }
+    .p-value {
+      font-size: 18px;
+      font-weight: 600;
+      @media only screen and (max-width: 768px) {
+        text-align: center
+      }
+      img {
+        width: 45px;
+        height: 33px;
+        margin-top: 9px;
+        margin-right: 6px;
+      }
+    }
+  }
 }

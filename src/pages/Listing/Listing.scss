@@ -1,0 +1,52 @@
+.listing {
+  .title {
+    margin-top: 35px; 
+    margin-bottom: 40px;
+    font-size: 20px;
+    color:#333333 !important;
+  }
+  .input-search {
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+    width: 30%;
+    margin-bottom: 40px;
+    .btn {
+      border: 1px solid #CDD2D9;
+      height: 38px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .table {
+    width: 100%;
+    border: 1px solid #DDE0E6;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    thead {
+      background: #F8F6F8;
+      font-size: 11px;
+      th {
+        font-weight: 400;
+        color:#6E6E6E
+      }
+    }
+    tbody {
+      color: #616161;
+      td {
+        font-size: 14px;
+        height: 65px;
+        padding-top: 23px;
+        a {
+          border-radius: 55%;
+          border: 1px solid #DDE0E6;
+          height: 46px;
+          padding: 8px 13px 8px 13px;
+          margin-left: -5px;
+        }
+      }
+    }
+  }
+}

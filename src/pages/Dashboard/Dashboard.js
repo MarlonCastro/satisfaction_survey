@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 import Header from './../Shared/Header/Header';
 import Overview from './../Overview/Overview';
+import Listing from '../Listing/Listing';
+import Footer from '../Shared/Footer/Footer';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -17,7 +19,9 @@ class Dashboard extends Component {
         <Header />
         <body>
           <Overview />
+          <Listing />
         </body>
+        <Footer/>
       </div>
     )}
 }
