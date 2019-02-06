@@ -1,0 +1,40 @@
+.overview {
+    .card-overview {
+        padding: 20px;
+        background: white;
+        height: 60px;
+        border-top: 2px solid #8ACC54;
+        p {
+            font-size: 13px;
+            text-align: center;
+            font-weight: 100;
+        }
+        &.rest {
+           background: rgb(228, 225, 228);
+           border-top: none
+        }
+    }
+    .title {
+        margin-top: 35px; 
+        font-size: 20px;
+        color:#333333 !important;
+    }
+    .bd-1 {
+        border: 1px solid #E6E6E6;
+    }
+    .card-balance {
+        padding: 30px 25px 5px 25px;
+        text-align: left;
+        p {
+            color:#333333 !important;
+        }
+        .title-small {
+            font-size: 15px;
+            
+        }
+        .description-number {
+            font-size: 30px;
+
+        }
+    }
+}

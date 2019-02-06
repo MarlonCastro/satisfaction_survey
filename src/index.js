@@ -4,6 +4,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { Router, Route, Switch } from 'react-router';
 import createHistory from 'history/createBrowserHistory';
 
+import 'bootstrap/dist/css/bootstrap.css';
 import API from './guidelines/api.instance';
 import './guidelines/style.guideline.scss';
 

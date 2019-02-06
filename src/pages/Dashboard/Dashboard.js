@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 
+import Header from './../Shared/Header/Header';
+import Overview from './../Overview/Overview';
+
 class Dashboard extends Component {
   constructor(props) {
     super();
@@ -11,7 +14,10 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <p>Aqui vem a aplicação</p>
+        <Header />
+        <body>
+          <Overview />
+        </body>
       </div>
     )}
 }
