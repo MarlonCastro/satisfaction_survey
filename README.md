@@ -1,6 +1,6 @@
 # satisfaction_survey
 
-Este projeto foi criado com [Create React App] (https://github.com/facebookincubator/cact-app).
+Este projeto foi criado com [Create React App]
 
 Para executar o projeto siga os passos abaixo! 
 
@@ -8,9 +8,3 @@ Para executar o projeto siga os passos abaixo!
 
 
 ### `npm start ou yarn start` 
-
-
-### `npm test ou yarn test`
-
-
-### `npm run build ou yarn build`
