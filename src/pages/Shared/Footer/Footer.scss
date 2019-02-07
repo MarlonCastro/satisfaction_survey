@@ -1,13 +1,26 @@
 .content-footer {
     position: relative;
-    height: 70px;
+    height: 90px;
     width: 100%;
-    background: white;
-    box-shadow: 5px 2px 8px rgba(136, 136, 136, 0.3);
+    background:white;
+    bottom: 0;
+    padding-top: 20px;
+    p {
+      text-align: center;
+      font-size: 13px
+    }
     .footer-ul {
       list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+      padding-left: 0;
       li {
-        text-align: center
+        img {
+          width: 30px;
+          height: 30px;
+          margin-right: 12px;
+        }
       }
     }
 }

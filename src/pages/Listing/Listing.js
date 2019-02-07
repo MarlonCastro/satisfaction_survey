@@ -13,7 +13,6 @@ class Listing extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps)
     this.renderLines(nextProps.dataSearchs)
   }
 

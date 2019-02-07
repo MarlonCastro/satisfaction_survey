@@ -25,7 +25,6 @@ class Overview extends Component {
   }
 
  componentWillReceiveProps(nextProps) {
-     console.log(nextProps)
      if(nextProps.dataValues.length) {
         this.setState({
             satisfaction: nextProps.dataValues[0].satisfaction,

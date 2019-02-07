@@ -63,7 +63,7 @@ class Dashboard extends Component {
   getSearchs =() => {
     ServiceApi.showSearchs().then((response) => {
       if (response instanceof ErrorMessage) {
-        alert("Não foi possível buscar os dados!")
+        alert("Erro ao buscar dados! Erro-> "+response.error)
         return;
       }
       this.setState({

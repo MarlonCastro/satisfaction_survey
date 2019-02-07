@@ -5,16 +5,13 @@ import { Router, Route, Switch } from 'react-router';
 import createHistory from 'history/createBrowserHistory';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import API from './guidelines/api.instance';
+
 import './guidelines/style.guideline.scss';
 
 import Dashboard from './pages/Dashboard/Dashboard';
 
 
 const routeHistory = createHistory();
-
-API.defineRequestInterceptor(localStorage);
-API.defineResponseInterceptor(routeHistory);
 
 ReactDOM.render(
   <Router history={routeHistory}>
