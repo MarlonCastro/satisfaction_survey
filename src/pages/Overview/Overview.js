@@ -12,8 +12,33 @@ class Overview extends Component {
   constructor(props) {
     super();
 
-    this.state = {}
+    this.state = {
+        satisfaction: 0,
+        evaluation: 0,
+        great: 0,
+        good: 0,
+        reasonable: 0,
+        bad: 0,
+        horrible: 0
+    }
+    
   }
+
+ componentWillReceiveProps(nextProps) {
+     console.log(nextProps)
+     if(nextProps.dataValues.length) {
+        this.setState({
+            satisfaction: nextProps.dataValues[0].satisfaction,
+            evaluation: nextProps.dataValues[0].evaluation,
+            great: nextProps.dataValues[0].great,
+            good: nextProps.dataValues[0].good,
+            reasonable: nextProps.dataValues[0].reasonable,
+            bad: nextProps.dataValues[0].bad,
+            horrible: nextProps.dataValues[0].horrible
+        })
+     }
+
+ }
 
   render() {
     return (
@@ -34,43 +59,43 @@ class Overview extends Component {
                 <div className="grid-overview no-padding-col bd-1">
                     <div className="card-balance">
                         <p className="title-small">Satisfação <img src={question} alt="question" /></p>
-                        <p className="description-number">82,1%</p>
+                        <p className="description-number">{this.state.satisfaction}%</p>
                     </div>
                 </div>
                 <div className="grid-overview no-padding-col bd-1">
                     <div className="card-balance">
                         <p className="title-small">Avaliações <img src={question} alt="question" /></p>
-                        <p className="description-number">1.298</p>
+                        <p className="description-number">{this.state.evaluation}</p>
                     </div>
                 </div>
                 <div className="grid-overview no-padding-col bd-1">
                     <div className="card-balance">
                         <p className="title-small">Excelente</p>
-                        <p className="p-value"><img src={excelente} alt="Excelente" />82,1%</p>
+                        <p className="p-value"><img src={excelente} alt="Excelente" />{this.state.great}%</p>
                     </div>
                 </div>
                 <div className="grid-overview no-padding-col bd-1">
                     <div className="card-balance">
                         <p className="title-small">Muito Bom</p>
-                        <p className="p-value"><img src={happy} alt="Excelente" /> 82,1%</p>
+                        <p className="p-value"><img src={happy} alt="Excelente" /> {this.state.good}%</p>
                     </div>
                 </div>
                 <div className="grid-overview no-padding-col bd-1">
                     <div className="card-balance">
                         <p className="title-small">Razoável</p>
-                        <p className="p-value"><img src={confused} alt="Excelente" /> 82,1%</p>
+                        <p className="p-value"><img src={confused} alt="Excelente" /> {this.state.reasonable}%</p>
                     </div>
                 </div>
                 <div className="grid-overview no-padding-col bd-1">
                     <div className="card-balance">
                         <p className="title-small">Ruim</p>
-                        <p className="p-value"><img src={sad} alt="Excelente" /> 82,1%</p>
+                        <p className="p-value"><img src={sad} alt="Excelente" /> {this.state.bad}%</p>
                     </div>
                 </div>
                 <div className="grid-overview no-padding-col bd-1">
                     <div className="card-balance">
                         <p className="title-small">Horrível</p>
-                        <p className="p-value"><img src={angry} alt="Excelente" /> 82,1%</p>
+                        <p className="p-value"><img src={angry} alt="Excelente" /> {this.state.horrible}%</p>
                     </div>
                 </div>
             </div>

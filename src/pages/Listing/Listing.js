@@ -7,7 +7,33 @@ class Listing extends Component {
   constructor(props) {
     super();
 
-    this.state = {}
+    this.state = {
+      lines :[]
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps)
+    this.renderLines(nextProps.dataSearchs)
+  }
+
+  renderLines = (array) => {
+    let lines = array.map(function(object,i){
+      let total = object.great + object.good + object.reasonable+ object.bad+ object.horrible
+      return(
+        <tr>
+          <td><a>{i}</a>&nbsp;&nbsp;&nbsp;&nbsp; {object.name}</td>
+          <td >{(object.great+object.good)/total*100} %</td>
+          <td>{total}</td>
+          <td>{object.great}</td>
+          <td>{object.good}</td>
+          <td>{object.reasonable}</td>
+          <td>{object.bad}</td>
+          <td>{object.horrible}</td>
+        </tr>
+      )
+    })
+    this.setState({ lines:lines })
   }
 
   render() {
@@ -21,8 +47,8 @@ class Listing extends Component {
                 <button className="btn" type="button"><img alt="icon search" src={iconSearch} /></button>
               </div>
           </div>
-          <div class="table-responsive">
-          <table class="table ">
+          <div className="table-responsive">
+          <table className="table ">
             <thead>
               <tr>
                 <th scope="col">NOME DA LOJA</th>
@@ -36,26 +62,7 @@ class Listing extends Component {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><a>1</a>  Belo Horizonte</td>
-                <td >4,0%</td>
-                <td>14</td>
-                <td>90</td>
-                <td>90</td>
-                <td>90</td>
-                <td>90</td>
-                <td>90</td>
-              </tr>
-              <tr>
-                <td><a>2</a> Rio</td>
-                <td>4,0%</td>
-                <td>14</td>
-                <td>90</td>
-                <td>90</td>
-                <td>90</td>
-                <td>90</td>
-                <td>90</td>
-              </tr>
+              {this.state.lines}
             </tbody>
           </table>
           </div>
