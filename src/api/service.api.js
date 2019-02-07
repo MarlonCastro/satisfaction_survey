@@ -2,7 +2,7 @@
 import Axios from 'axios';
 import ErrorMessage from './error.model'
 
-const host = 'http://storage.googleapis.com/dito-questions/survey-responses.json'
+const host = 'https://storage.googleapis.com/dito-questions/survey-responses.json'
 
 class ServiceApi {
   static async showSearchs() {
