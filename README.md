@@ -2,7 +2,8 @@
 
 Este projeto foi criado com [Create React App]
 
-Para executar o projeto siga os passos abaixo! 
+
+Para executar o projeto clone o repositorio e depois dentro do repositorio criado em sua maquina siga os passos abaixo! 
 
 ### `npm install ou yarn install`
 
